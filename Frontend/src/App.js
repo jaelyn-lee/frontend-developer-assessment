@@ -80,7 +80,8 @@ const App = () => {
   };
 
   const handleDescriptionChange = (event) => {
-    // todo
+    const updatedDescription = event.target.value;
+    setDescription(updatedDescription);
   };
 
   async function getItems() {
@@ -93,7 +94,8 @@ const App = () => {
 
   async function handleAdd() {
     try {
-      alert('todo');
+      setItems([...items, { description }]);
+      setDescription('');
     } catch (error) {
       console.error(error);
     }
