@@ -94,7 +94,7 @@ const App = () => {
 
   async function handleAdd() {
     try {
-      setItems([...items, { description }]);
+      setItems([...items, { id: items.length + 1, description }]);
       setDescription('');
     } catch (error) {
       console.error(error);
